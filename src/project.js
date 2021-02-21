@@ -6,7 +6,7 @@
 if (selectModal) {
   let extraScoreStr = '';
   while (isNaN(parseInt(extraScoreStr))) {
-    extraScoreStr = prompt(' ', '1').trim();
+    extraScoreStr = prompt('주작기 성능', '1').trim();
   }
   extraScore = parseInt(extraScoreStr)
 }
