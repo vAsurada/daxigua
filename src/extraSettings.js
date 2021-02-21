@@ -6,10 +6,10 @@
 let extraScore = 1;
 
 // 无敌模式：true 改为 false
-let wuDi = false;
+let wuDi = true;
 
 // 第一个水果：修改数字为 0-10, 0 为葡萄，9 为半个西瓜
-let firstFruit = 10;
+let firstFruit = 0;
 
 // 水果合成反转：false 改为 true
 let reverseLevelUp = false;
@@ -19,7 +19,7 @@ const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 生成随机水果最小值
 const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
 let setFruits = {
   // 指定前几次生成的水果，可填入任意数量的数字，0 为葡萄，9 为半个西瓜
-  startFruits: reverseLevelUp ? [10, 10, 9, 8, 8, 7] : [10, 10, 10, 10, 10, 10],
+  startFruits: reverseLevelUp ? [10, 10, 9, 8, 8, 7] : [[0, 0, 1, 2, 2, 3],
   randomFunction: () => {
     return minRandomFruitNum + Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum));
   }
@@ -32,7 +32,7 @@ let fruitQTan = false;
 let fruitSlowDown = false;
 
 // 点击右上方图标更换水果：false 改为 true 即可
-let clickChangeFruit = true;
+let clickChangeFruit = false;
 
 // 广告链接：false 或为空字符串表示不会跳转到广告
 let adLink = 'https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png';
